@@ -22,6 +22,10 @@ function wife() {
     imgcat $IMG
 }
 
+function jisho() {
+    open "http://jisho.org/search/$*"
+}
+
 # exports
 export EDITOR=nvim
 export PATH="$PATH:~/.bin"
