@@ -21,7 +21,7 @@ def re_countfolder(folder, depth)
       # its a directory
       if(has_subfolders?(file))
         # find non folders
-        count = Dir.entries(file).reject{|entry| entry =~ /^\.{1,2}$/}.count
+        count = Dir.entries(file).reject{|entry| File.directory? entry}.count
         total += count
         # it has subdirectories, so we count normal files then recurse
         printf("%s%s/ %i\n", "  " * depth, file.match(NAME_REGEX).captures[0], count)
