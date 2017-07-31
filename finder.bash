@@ -7,7 +7,7 @@
 # launch quicklook
 function ql() {
     [ -z "$1" ] && exit
-    qlmanage >/dev/null ^/dev/null -p $argv &
+    qlmanage &>/dev/null -p $argv &
 }
 
 # print finder path
