@@ -1,6 +1,8 @@
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+source ~/code/scripts/finder.bash
+
 function macfeh() {
     [ -z "$1" ] && return
     open -b "drabweb.macfeh" $@
