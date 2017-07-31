@@ -39,6 +39,6 @@ function pfs() {
 
 # open finder
 function fnd() {
-    open -a Finder $argv
+    open -a "Finder" "$argv"
 }
 
