@@ -7,7 +7,7 @@
 # launch quicklook
 function ql() {
     [ -z "$1" ] && exit
-    qlmanage &>/dev/null -p $argv &
+    qlmanage &>/dev/null -p $@ &
 }
 
 # print finder path
@@ -39,6 +39,6 @@ function pfs() {
 
 # open finder
 function fnd() {
-    open -a "Finder" "$argv"
+    open -a "Finder" "$@"
 }
 
