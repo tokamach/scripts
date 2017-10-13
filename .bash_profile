@@ -43,6 +43,16 @@ function remove_duplicates_in_animu_folder() {
     fi
 }
 
+function owo() {
+    sed 's/r/w/g;
+         s/l/w/g;
+         s/no/nyo/g
+         s/na/nya/g'
+}
+
+# aliases
+alias "emnw"="emacs -nw"
+
 # exports
 export EDITOR=nvim
 export PATH="$PATH:~/.bin"
