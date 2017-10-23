@@ -1,7 +1,7 @@
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-source ~/code/scripts/finder.bash
+[ -f ~/code/scripts/finder.bash ] && . ~/code/scripts/finder.bash
 
 function macfeh() {
     [ -z "$1" ] && return
@@ -56,11 +56,6 @@ alias "emnw"="emacs -nw"
 # exports
 export EDITOR=nvim
 export PATH="$PATH:~/.bin"
-export PS1="\w ❥ "
-
-#go shit
-export GOPATH=$HOME/code/go
-export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:$GOROOT/bin
+#export PS1="\w \e[38;5;163m❥\[\033[0m\] "
+export PS1="\w - "
 
