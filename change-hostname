@@ -1,0 +1,3 @@
+scutil --set ComputerName $1
+scutil --set HostName $1
+scutil --set LocalHostName $1

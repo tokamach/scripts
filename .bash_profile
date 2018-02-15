@@ -29,13 +29,16 @@ function jisho() {
 }
 
 function remove_duplicates_in_animu_folder() {
-    if [ -eq $(pwd) "/Users/tom/Pictures/animu" ] ; then
+    if [ $(pwd) == "/Users/tom/Pictures/animu" ] ; then
         echo "===WARNING==="
         echo "Running this function can delete waifus indiscriminately."
         read -p "Are you sure? " -n 1 -r
         echo
         if [[ $REPLY =~ ^[Yy]$ ]] ; then
-            fdupes 2hu/ gabriel_dropout/ chuu2/ madoka_magica/ k-on/ -r -n -d -N
+            for d in 2hu/ gabriel_dropout/ chuu2/ madoka_magica/ k-on/ koe_no_katachi/ katawa_shoujo/;
+            do
+                fdupes $d -r -n -d -N
+            done
         fi
     else
         echo "===WARNING==="
@@ -52,10 +55,10 @@ function owo() {
 
 # aliases
 alias "emnw"="emacs -nw"
+alias "japanese-perl"="ruby"
 
 # exports
 export EDITOR=nvim
-export PATH="$PATH:~/.bin"
-#export PS1="\w \e[38;5;163m❥\[\033[0m\] "
+export PATH="$PATH:~/code/scripts:~/.bin"
 export PS1="\w - "
 

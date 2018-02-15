@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+echo ""
+printf "┌──────┐\n"
+printf "│┌────┐│  usr\t$(id -un | tr -d '\n' && echo -n "@" && hostname)\n"
+printf "││O  O││  os\tmacOS $(sw_vers -productVersion)\n"
+printf "││  ┘ ││  shell\tbash\n"
+printf "│└────┘│  res\t$(system_profiler SPDisplaysDataType | grep Resolution | sed 's/^.*: //g' | head -1)\n"
+printf "│  ──┤│\n"
+printf "└──────┘\n"
+echo ""
